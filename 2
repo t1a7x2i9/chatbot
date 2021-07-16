@@ -1,0 +1,13 @@
+import random
+is_chat = True
+response = []
+while is_chat == True:
+    q = input('')
+    response.append(q)
+    print(random.choice(response))
+    response = list(set(response))
+    key = input('会話を終了しますか？(y/n)>>')
+    if key == 'y':
+       is_chat = False
+print('楽しかった、またお話しようね！')
+print(response)
