@@ -1,0 +1,22 @@
+import random
+is_chat = True
+response = []
+greeting = ['やあ','おはよう','こんにちは','こんばんは','はじめまして','初めまして','始めまして','やっほー']
+name = ['なまえは？','名前は？','あなたは誰？','君のなまえは？','君の名前は？','なまえをおしえて','名前を教えて','名前をおしえて']
+print('はじめまして、僕はモスドンです。いっぱいお話ししてください。')
+while is_chat == True:
+    q = input('')
+    response.append(q)
+    q = str(q)
+    if q in greeting:
+       print(q)
+    elif q in name:
+       print('モスドンです')
+    else:
+       print(random.choice(response))
+    response = list(set(response))
+    key = input('会話を終了しますか？(y/n)>>')
+    if key == 'y' or key == 'ｙ':
+       is_chat = False
+print('またのご利用をお待ちしています。')
+print(response)
